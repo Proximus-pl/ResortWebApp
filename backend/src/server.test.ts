@@ -8,15 +8,16 @@ jest.mock('fs');
 
 describe('Resort Map API', () => {
   const mockMapData = "Wp#\n.cW";
+  
+  // 1. Database mock uses "room" (Matches bookings.json)
   const mockBookings = [
-    { cabanaId: "W_0_0", roomNumber: "101", guestName: "Alice" }
+    { cabanaId: "W_0_0", room: "101", guestName: "Alice" }
   ];
 
   beforeEach(() => {
     // Reset mocks before each test
     jest.resetAllMocks();
     
-    // CHANGE THIS LINE: use (path: any) instead of (path: string)
     (fs.readFileSync as jest.Mock).mockImplementation((path: any) => {
       if (path.includes('map.ascii')) return mockMapData;
       if (path.includes('bookings.json')) return JSON.stringify(mockBookings);
@@ -43,6 +44,7 @@ describe('Resort Map API', () => {
   it('POST /api/bookings should reject booking if guest details do not match', async () => {
     const res = await request(app)
       .post('/api/bookings')
+      // 2. API Request uses "roomNumber" (Matches the req.body)
       .send({ cabanaId: 'W_2_1', roomNumber: '999', guestName: 'Stranger' });
 
     expect(res.status).toBe(401);
@@ -52,6 +54,7 @@ describe('Resort Map API', () => {
   it('POST /api/bookings should reject booking if cabana is already taken', async () => {
     const res = await request(app)
       .post('/api/bookings')
+      // 2. API Request uses "roomNumber" (Matches the req.body)
       .send({ cabanaId: 'W_0_0', roomNumber: '101', guestName: 'Alice' });
 
     expect(res.status).toBe(400);
@@ -61,6 +64,7 @@ describe('Resort Map API', () => {
   it('POST /api/bookings should succeed for a valid guest and available cabana', async () => {
     const res = await request(app)
       .post('/api/bookings')
+      // 2. API Request uses "roomNumber" (Matches the req.body)
       .send({ cabanaId: 'W_2_1', roomNumber: '101', guestName: 'Alice' });
 
     expect(res.status).toBe(200);

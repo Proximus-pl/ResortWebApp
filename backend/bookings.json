@@ -1,11 +1,13 @@
 [
   {
     "room": "101",
-    "guestName": "Alice Smith"
+    "guestName": "Alice Smith",
+    "cabanaId": "W_4_11"
   },
   {
     "room": "102",
-    "guestName": "Bob Jones"
+    "guestName": "Bob Jones",
+    "cabanaId": "W_5_11"
   },
   {
     "room": "103",
@@ -17,7 +19,8 @@
   },
   {
     "room": "105",
-    "guestName": "Eva Martinez"
+    "guestName": "Eva Martinez",
+    "cabanaId": "W_3_11"
   },
   {
     "room": "106",
@@ -398,15 +401,5 @@
   {
     "room": "520",
     "guestName": "Wade Marshall"
-  },
-  {
-    "cabanaId": "W_3_11",
-    "roomNumber": "105",
-    "guestName": "Oliwer Szefer"
-  },
-  {
-    "cabanaId": "W_4_11",
-    "roomNumber": "106",
-    "guestName": "Oliwer Szefer"
   }
 ]

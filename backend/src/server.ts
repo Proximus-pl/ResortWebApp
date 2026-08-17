@@ -42,7 +42,8 @@ const getMapData = () => {
         const booking = bookings.find((b: any) => b.cabanaId === id);
         tile.isBooked = !!booking;
         if (booking) {
-          tile.bookedBy = { roomNumber: booking.roomNumber, guestName: booking.guestName };
+          // FIX: Changed booking.roomNumber to booking.room to match your JSON!
+          tile.bookedBy = { roomNumber: booking.room, guestName: booking.guestName };
         }
       }
       return tile;
@@ -69,8 +70,9 @@ app.post('/api/bookings', (req, res) => {
 
     // 1. VALIDATION: Check if room number and name match a current guest
     const guestIndex = bookings.findIndex((b: any) => 
-      String(b.roomNumber) === String(roomNumber) && 
-      b.guestName.toLowerCase() === guestName.toLowerCase()
+      // FIX: Changed b.roomNumber to b.room, and added .trim() for safety
+      String(b.room).trim() === String(roomNumber).trim() && 
+      String(b.guestName).trim().toLowerCase() === String(guestName).trim().toLowerCase()
     );
 
     if (guestIndex === -1) {
