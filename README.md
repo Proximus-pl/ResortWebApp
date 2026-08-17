@@ -1,3 +1,5 @@
+Note: To check how to run the app check out - Instruction.md <br/>
+
 1. In-Memory Backend (No Database)
 To ensure this project is completely zero-configuration and easy to run locally, I aimed for a Node.js backend using an in-memory data structure (or local file) rather than requiring a dedicated database such as PostgreSQL or MongoDB. It demonstrates API routing, state mutation (booking cabanas), and error handling without adding heavy infrastructure dependencies.
 

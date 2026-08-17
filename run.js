@@ -33,7 +33,7 @@ const frontend = spawn('npm', ['run', 'dev'], {
 
 // Clean up processes on exit
 process.on('SIGINT', () => {
-  console.log('\n🛑 Shutting down servers...');
+  console.log('\n Shutting down servers...');
   backend.kill('SIGINT');
   frontend.kill('SIGINT');
   process.exit();
