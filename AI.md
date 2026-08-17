@@ -1,9 +1,14 @@
-The only that assisted while making the app was Google Gemini 3.1 Pro.<br/>
-https://share.gemini.google/j0ZehbFhBY6j <br/>
-Prompts were focused specifically on building the frontend, backend, tests and solving the occuring issues on the way.<br/>
+The only that assisted while making the app was Google Gemini 3.1 Pro.
+<br/>
+https://share.gemini.google/j0ZehbFhBY6j 
+<br/>
+Prompts were focused specifically on building the frontend, backend, tests and solving the occuring issues on the way.
+<br/>
 Around 80 user input prompts in total from 1 continous conversation.
+<br/>
+The following prompts were used throughout the conversation: 
 
-The following prompts were used throughout the conversation: <br/>
+<br/>
 
 * **Initial Project Brief**: "# Resort Map — Code Test *You are creating the world's first interactive cabana booking website for luxury resorts. Can I make it a react app with some sort of fast API since it uses a json file for the backend right?"
 

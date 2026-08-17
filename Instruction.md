@@ -1,11 +1,17 @@
 1. The App <br/>
 
-Open the terminal and enter "npm install" command (considering node.js is installed), <br/>
-Use the command "node run.js" inside the terminal to run the app.<br/>
-Use the localhost address from Vite to copy to the browser.<br/>
-Enter the credentials.<br/> 
-Choose an available cabana from the map.<br/>
-Enter the room number and a guest name to confirm the booking of the cabana.<br/>
+Open the terminal and enter "npm install" command (considering node.js is installed).
+<br/>
+Use the command "node run.js" inside the terminal to run the app.
+<br/>
+Use the localhost address from Vite to copy to the browser.
+<br/>
+Enter the credentials.
+<br/> 
+Choose an available cabana from the map.
+<br/>
+Enter the room number and a guest name to confirm the booking of the cabana.
+<br/>
 All the booked cabanas will be marked with the 'X' sign meaning it was booked.
 
 2. The Tests <br/>
